@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artworks</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="./images/favicon.jpg" type="image/x-icon">
+    <!-- 폰트 수트체 -->
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'SUIT', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        #artworks {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            color: #000;
+
+        }
+
+        /* 썸네일 sub_swiper */
+        .swiper {
+            /* 썸네일 스와이퍼 폭 */
+            width: 500px;
+            height: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+
+        /* 메인스와이퍼 */
+        .main_swiper {
+            /* 메인스와이퍼 화면 높이, 폭 */
+            height: 85%;
+            width: 100%;
+        }
+
+
+        .main_swiper .swiper-slide {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+
+        .main_swiper .swiper-slide img {
+            display: block;
+            /* 이미지 여백 */
+            width: 100%;
+            height: 95%;
+            object-fit: contain;
+        }
+
+
+
+        .sub_swiper {
+            /* 썸네일 이미지 높이 */
+            height: 13%;
+            box-sizing: border-box;
+            padding: 10px 0;
+            margin-top: 9px;
+        }
+
+        .sub_swiper .swiper-slide {
+            width: 22%;
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .sub_swiper .swiper-slide img {
+            object-fit: cover;
+
+        }
+
+        .sub_swiper .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+
+
+
+        @media (max-width:499px) {
+
+            /* 썸네일 크기 */
+            .swiper {
+                width: 100%;
+            }
+
+            .sub_swiper {
+                height: 10%;
+            }
+
+        }
+
+
+
+        .text {
+            z-index: 99;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 153, 0, 0.8);
+            color: #fff;
+        }
+
+        .text p {
+            padding: 0 50px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Swiper -->
+    <div id="artworks">
+        <!-- 메인 스와이퍼 -->
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+            class="main_swiper swiper mySwiper2 ">
+            <div class="swiper-wrapper">
+
+
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="./images/artwork_sea.jpg" />
+                    </div><!-- zoom -->
+                </div><!-- slide -->
+
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="./images/artwork_20.jpg" />
+                    </div><!-- zoom -->
+                </div><!-- slide -->
+
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="./images/artwork_ks.jpg" />
+                    </div><!-- zoom -->
+                </div><!-- slide -->
+
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="./images/artwork_grand.jpg" />
+                    </div><!-- zoom -->
+                </div><!-- slide -->
+
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="./images/artwork_brother.jpg" />
+                    </div><!-- zoom -->
+                </div><!-- slide -->
+
+
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="./images/artwork_profile.jpg" />
+                    </div><!-- zoom -->
+                </div><!-- slide -->
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="./images/artwork_ssook.jpg" />
+                    </div><!-- zoom -->
+                </div><!-- slide -->
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="./images/artwork_nail.jpg" />
+                    </div><!-- zoom -->
+                </div><!-- slide -->
+
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="./images/artwork_nail2.jpg" />
+                    </div><!-- zoom -->
+                </div><!-- slide -->
+
+                <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                        <img src="./images/artwork_youtube2.jpg" />
+                    </div><!-- zoom -->
+                </div><!-- slide -->
+
+            </div><!-- wrapper -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <!-- 서브 스와이퍼 / 썸네일  -->
+        <div thumbsSlider="" class="sub_swiper swiper mySwiper ">
+            <div class="swiper-wrapper">
+
+
+                <div class="swiper-slide">
+                    <img src="./images/artwork_sea.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/artwork_20.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/artwork_ks.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/artwork_grand.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/artwork_brother.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/artwork_profile.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/artwork_ssook.jpg" />
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./images/artwork_nail.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/artwork_nail2.jpg" />
+                </div>
+
+
+                <div class="swiper-slide">
+                    <img src="./images/artwork_youtube2.jpg" />
+                </div>
+
+
+            </div><!-- wrapper -->
+        </div><!-- sub_swiper -->
+        <div class="text">
+            <p>더블클릭하면 확대됩니다</p>
+        </div><!-- text -->
+    </div><!-- artworks -->
+    <!-- Swiper JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+
+        //서브 썸네일 스와이퍼
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 5,
+            freeMode: true,
+            watchSlidesProgress: true,
+            centeredSlides: true,
+        });
+        // 메인 스와이퍼
+        var swiper2 = new Swiper(".mySwiper2", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+            zoom: true,
+        });
+
+        window.onload = function () {
+            setTimeout(function () {
+                $(".text").fadeOut(800);
+
+            }, 6000);
+        };
+
+        $('html').click(function () {
+            $(".text").fadeOut(800);
+        });
+
+    </script>
+
+</body>
+
+</html>

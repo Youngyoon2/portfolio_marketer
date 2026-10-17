@@ -1,0 +1,879 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>포트폴리오 이영윤</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- 메인 이름 원래 폰트 -->
+    <!-- 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+ -->
+    <!-- 폰트 수트체 -->
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <!-- 메인 영문 폰트  -->
+    <link rel="stylesheet" href="https://use.typekit.net/mpt6dxd.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./images/favicon.jpg" type="image/x-icon">
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+    <div class="fh5co-loader"></div>
+
+    <div id="page">
+        <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
+            style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
+            <div class="overlay">
+                <!-- 이미지 오버레이 자식으로-> 포지션 -->
+                <!-- 				<img class="left_hand" src="./images/haze-hand-holding-a-pencil.png" alt="왼손">				<img class="right_hand" src="./images/haze-hand-pointing-at-something.png" alt="왼손">
+				<img src="./images/haze-computer-mouse.png" alt="" class="mouse">
+ --> <img src="./images/hand.png" alt="" class="hand">
+                <img src="./images/mouse.png" alt="" class="mouse">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t js-fullheight">
+                            <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+                                <div class="profile-thumb" style="background: url(./images/me.jpg);"></div>
+                                <h1><span>Lee Young Yun</span></h1>
+                                <h3 class="intro_about"><span>
+                                        문장력에 시각적 표현력까지 갖춘<br>
+                                        <b>하이브리드 마케터</b>
+                                        <span class="impact">이영윤</span>입니다<br>
+                                        <br>
+                                        -<br>
+                                        010.8877.4297<br>
+                                        wken264@hanmail.net
+                                    </span>
+
+                                </h3>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <!-- 프로필 -->
+
+        <!-- 블로그 섹션 시작-->
+        <style>
+            #naver-blog {
+                --bg: #fff;
+                --fg: #222;
+                --sub: #999;
+                --line: #ccc;
+                --box: #f4f4f4;
+                --accent: #03c75a;
+                --thumb: #eee;
+                --nb-pad-top: 6em;
+                /* 섹션 위쪽 여백 */
+                --nb-pad-bottom: 6em;
+                /* 섹션 아래쪽 여백 (Portfolio 주황 배경과의 간격) */
+                box-sizing: border-box;
+                padding: var(--nb-pad-top) 0 var(--nb-pad-bottom);
+                background: var(--bg);
+                color: var(--fg);
+                font-family: inherit;
+                font-size: 13px;
+                line-height: 1.5;
+                color-scheme: light;
+            }
+
+            #naver-blog *,
+            #naver-blog *::before,
+            #naver-blog *::after {
+                box-sizing: border-box
+            }
+
+            /* About Me / Portfolio와 같은 .container 폭을 쓰고, 반응형 기준도 이 폭으로 잡아요 */
+            #naver-blog .nb-container {
+                container: nb / inline-size
+            }
+
+
+            #naver-blog .nb-wrap {
+                display: grid;
+                grid-template-columns: 220px 1fr;
+                gap: 56px
+            }
+
+            /* 프로필 카드: 사진 / 이름 / 소개글을 구분 */
+            #naver-blog .nb-side {
+                align-self: start;
+                font-size: 12px;
+                text-align: center;
+                border: 1px solid #e5e5e5;
+                border-radius: 12px;
+                padding: 24px 18px
+            }
+
+            #naver-blog .nb-avatar {
+                width: 120px;
+                aspect-ratio: 1;
+                margin: 0 auto;
+                border-radius: 50%;
+                background: var(--box);
+                display: grid;
+                place-items: center;
+                font-size: 72px;
+                text-decoration: none;
+                color: inherit;
+                overflow: hidden
+            }
+
+            #naver-blog .nb-avatar img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block
+            }
+
+            #naver-blog .nb-name {
+                margin: 16px 0 0;
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 1.3
+            }
+
+            /* 이름 아래 짧은 포인트 선 */
+            #naver-blog .nb-name::after {
+                content: "";
+                display: block;
+                width: 24px;
+                height: 3px;
+                border-radius: 2px;
+                background: var(--accent);
+                margin: 12px auto 0
+            }
+
+            #naver-blog .nb-bio {
+                text-align: left;
+                margin: 12px 0 0;
+                color: #666;
+                font-size: 14px;
+                line-height: 1.7;
+                word-break: keep-all
+            }
+
+            #naver-blog .nb-cat {
+                margin: 0 0 22px
+            }
+
+            #naver-blog .nb-cats {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px
+            }
+
+            #naver-blog .nb-cat button {
+                display: inline-block;
+                width: auto;
+                background: var(--bg);
+                border: 1px solid var(--line);
+                border-radius: 20px;
+                padding: 6px 14px;
+                color: var(--fg);
+                font: inherit;
+                cursor: pointer
+            }
+
+            #naver-blog .nb-cat button:hover {
+                border-color: var(--accent);
+                color: var(--accent)
+            }
+
+            #naver-blog .nb-cat button[aria-pressed="true"] {
+                background: var(--accent);
+                border-color: var(--accent);
+                color: #fff;
+                font-weight: 700
+            }
+
+            #naver-blog .nb-cat .nb-n {
+                color: var(--sub);
+                font-weight: 400
+            }
+
+            #naver-blog .nb-cat button[aria-pressed="true"] .nb-n {
+                color: #fff
+            }
+
+            #naver-blog .nb-main {
+                min-width: 0
+            }
+
+            #naver-blog .nb-go {
+                display: block;
+                width: 100%;
+                margin: 20px 0 0;
+                text-align: center;
+                padding: 7px 14px;
+                border: 1px solid var(--accent);
+                border-radius: 20px;
+                color: var(--accent);
+                font-weight: 700;
+                font-size: 13px;
+                text-decoration: none
+            }
+
+            #naver-blog .nb-go:hover {
+                background: var(--accent);
+                color: #fff
+            }
+
+            #naver-blog .nb-head {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                margin-bottom: 22px
+            }
+
+            #naver-blog .nb-head b {
+                font-size: 14px
+            }
+
+            #naver-blog .nb-head span {
+                color: var(--sub);
+                font-weight: 400;
+                font-size: 13px
+            }
+
+            #naver-blog .nb-head button {
+                background: none;
+                border: 0;
+                color: var(--fg);
+                font: inherit;
+                cursor: pointer
+            }
+
+            #naver-blog .nb-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px 22px
+            }
+
+            #naver-blog .nb-grid.nb-list {
+                grid-template-columns: 1fr;
+                gap: 0
+            }
+
+            #naver-blog .nb-grid.nb-list .nb-card {
+                display: grid;
+                grid-template-columns: 120px 1fr;
+                gap: 14px;
+                padding: 12px 0;
+                border-bottom: 1px solid var(--line)
+            }
+
+            #naver-blog .nb-card {
+                color: inherit;
+                text-decoration: none;
+                display: block
+            }
+
+            #naver-blog .nb-thumb {
+                aspect-ratio: 1;
+                background: var(--thumb);
+                display: grid;
+                place-items: center;
+                font-size: 54px;
+                overflow: hidden
+            }
+
+            #naver-blog .nb-thumb img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block
+            }
+
+            #naver-blog .nb-card h4 {
+                margin: 14px 0 8px;
+                font-size: 13px;
+                line-height: 1.55;
+                font-weight: 700;
+                color: var(--fg)
+            }
+
+            #naver-blog .nb-grid.nb-list .nb-card h4 {
+                margin-top: 0
+            }
+
+            #naver-blog .nb-info {
+                color: var(--sub);
+                font-size: 12px;
+                margin: 0
+            }
+
+            #naver-blog .nb-card:hover h4 {
+                text-decoration: underline
+            }
+
+            #naver-blog .nb-card:focus-visible,
+            #naver-blog .nb-cat button:focus-visible,
+            #naver-blog .nb-head button:focus-visible,
+            #naver-blog .nb-go:focus-visible,
+            #naver-blog .nb-avatar:focus-visible {
+                outline: 2px solid var(--accent);
+                outline-offset: 2px
+            }
+
+            /* 반응형: 화면이 아니라 이 섹션의 너비 기준.
+               기본 스타일과 같은 #naver-blog 선택자를 쓰고, 기본 스타일보다 아래에 둬야 덮어써져요 */
+            @container nb (max-width:860px) {
+                #naver-blog .nb-grid {
+                    grid-template-columns: repeat(2, 1fr)
+                }
+            }
+
+            /* 폭이 좁아지면 프로필(위) / 글 목록(아래)으로 쌓여요 */
+            @container nb (max-width:640px) {
+                #naver-blog .nb-wrap {
+                    grid-template-columns: 1fr;
+                    gap: 24px
+                }
+
+                #naver-blog .nb-side {
+                    display: grid;
+                    grid-template-columns: 72px 1fr;
+                    gap: 0 14px;
+                    align-items: center;
+                    text-align: left;
+                    padding: 16px
+                }
+
+                #naver-blog .nb-avatar {
+                    grid-row: span 2;
+                    width: 72px;
+                    margin: 0;
+                    font-size: 36px
+                }
+
+                #naver-blog .nb-name {
+                    margin: 0;
+                    align-self: end;
+                    font-size: 16px
+                }
+
+                #naver-blog .nb-name::after {
+                    margin: 8px 0 0
+                }
+
+                #naver-blog .nb-bio {
+                    margin: 8px 0 0;
+                    align-self: start
+                }
+
+                #naver-blog .nb-go {
+                    grid-column: 1 / -1;
+                    margin-top: 14px
+                }
+
+                #naver-blog .nb-grid {
+                    gap: 22px 14px
+                }
+            }
+
+            @container nb (max-width:320px) {
+                #naver-blog .nb-grid {
+                    grid-template-columns: 1fr
+                }
+            }
+        </style>
+
+        <section id="naver-blog" aria-label="블로그 글 목록">
+            <div class="container nb-container">
+                <div class="nb-divider" aria-hidden="true"></div>
+                <div class="nb-wrap">
+                    <div class="nb-side">
+                        <a class="nb-avatar" href="https://blog.naver.com/wken4297" target="_blank" rel="noopener"
+                            aria-label="네이버 블로그로 이동"><img
+                                src="https://blogpfthumb-phinf.pstatic.net/MjAyMDA2MTBfMjc4/MDAxNTkxNzk0MTUxODgy.OES40m4cd3PJqYCW1eHSfdOJaB_GppX_RybZloQLQdQg.KcIJEfM1QhywQZ_b_rzKXnjqO5ideahbVAUXKD01hdcg.PNG.wken4297/SmartSelectImage_2016-10-11-22-33-43.png?type=w3840"
+                                alt="프로필" referrerpolicy="no-referrer"></a>
+                        <div class="nb-name">이영윤</div>
+                        <p class="nb-bio">글과 디자인을 함께 고민하는 마케터입니다.<br>
+                            감각적인 카피라이팅과 디자인을 이해하는 시각을 더해, 브랜드의 가치를 전하는 마케터가 되겠습니다.</p>
+                        <a class="nb-go" href="https://blog.naver.com/wken4297" target="_blank" rel="noopener">개인 블로그 바로가기</a>
+                    </div>
+                    <div class="nb-main">
+                        <div class="nb-cat">
+                            <div class="nb-cats"></div>
+                        </div>
+                        <div class="nb-head"><b class="nb-title"></b><button class="nb-toggle"
+                                type="button">목록열기</button>
+                        </div>
+                        <div class="nb-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            (function () {
+                var root = document.getElementById("naver-blog");
+                if (!root) return;
+
+                // ▼ 글 데이터: 최신 글을 맨 위에. 항목 사이엔 쉼표, 마지막 항목 뒤엔 쉼표 없음
+                // c 카테고리 / t 제목 / d 날짜 / n 댓글 수 / e 이모지 썸네일 / img 썸네일 경로 / url 글 주소
+                var posts = [
+                    { c: "글쓰기", t: "목욕탕, 돈 내고 고립되기", d: "2026. 9. 23.", n: 0, e: "📓", img: "/images/blog_1.jfif", url: "https://blog.naver.com/wken4297/224395131651" },
+                    { c: "글쓰기", t: "운동을 하는 이유 💪", d: "2026. 8. 29.", n: 0, e: "🍋", img: "/images/blog_2.png", url: "https://blog.naver.com/wken4297/223336424653" },
+                    { c: "도서리뷰", t: "[민음사 한국고전] 방랑 지식인의 자급자족 현실도피 콘텐츠 📔김시습의 <금오신화>", d: "2026. 8. 23.", n: 2, e: "🍜", img: "/images/blog_3.png", url: "https://blog.naver.com/wken4297/224387535024" },
+                    { c: "도서리뷰", t: "나를 탐구하는 색다른 방법, <나의 작은 사주 책> 📔", d: "2026. 8. 18.", n: 0, e: "🧀", img: "/images/blog_4.jfif", url: "https://blog.naver.com/wken4297/224326034632" },
+                    { c: "정보공유", t: "롯데카드 결제 '무료' 앱 알림 설정 방법", d: "2026. 8. 8.", n: 41, e: "🥢", img: "/images/blog_5.jpg", url: "https://blog.naver.com/wken4297/224356648333" },
+                    { c: "홍보글", t: "[부산역/초량역] 혼밥하기 좋은 가성비 맛집 <바보국밥>", d: "2026. 8. 6.", n: 5, e: "💳", img: "/images/blog_6.png", url: "https://blog.naver.com/sshnw11/224391983014" },
+                    { c: "홍보글", t: "[부산 중앙동] 진한 콩국수와 얼큰한 국물의 <그대라면>🍜", d: "2026. 7. 25.", n: 0, e: "🥐", img: "/images/blog_7.png", url: "https://blog.naver.com/sshnw11/224396075540" },
+                    { c: "홍보글", t: "[후원금 안내] 후원으로 따뜻한 희망을 함께 만들어주세요🍀", d: "2026. 7. 17.", n: 2, e: "🍱", img: "/images/blog_8.png", url: "https://blog.naver.com/sshnw11/224388590764" },
+                    { c: "홍보글", t: "🎉 2026년('25년 실적) 노인일자리 및 사회활동 지원사업 우수 수행기관 선정 소식 🎉", d: "2026. 7. 16.", n: 2, e: "🍱", img: "/images/blog_9.png", url: "https://blog.naver.com/sshnw11/224413612271" },
+                    { c: "홍보글", t: "[삼성희망네트워크] 부산진구/금정구 채용박람회 참여 소식 📢", d: "2026. 7. 10.", n: 2, e: "🍱", img: "/images/blog_10.jpg", url: "https://blog.naver.com/sshnw11/224398213886" },
+                    { c: "홍보글", t: "[부산디자인학원] 이미지 색상 추출하는 3가지 방법 / 일러스트레이터 컬러 팔레트 만들기", d: "2024. 7. 25.", n: 2, e: "🍱", img: "/images/blog_11.jpg", url: "https://blog.naver.com/nrdesign/223523994031" },
+                    { c: "홍보글", t: "[국비지원교육] 국민내일배움카드 훈련수당 금액 총정리!", d: "2024. 7. 26.", n: 2, e: "🍱", img: "/images/blog_12.jpg", url: "https://blog.naver.com/nrdesign/223526409666" }
+                ];
+                // 카테고리: 첫 번째(null)는 전체보기
+                var cats = [["전체보기", null], ["홍보글"], ["도서리뷰"], ["글쓰기"], ["정보공유"],];
+
+                var cur = null, listMode = false;
+                var $ = function (s) { return root.querySelector(s) };
+                function esc(s) { return String(s).replace(/[&<>"]/g, function (m) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[m] }) }
+
+                function render() {
+                    var items = posts.filter(function (p) { return !cur || p.c === cur });
+                    $(".nb-title").innerHTML = esc(cur || "전체보기") + ' <span>' + items.length + '개의 글</span>';
+
+                    var g = $(".nb-grid");
+                    g.className = "nb-grid" + (listMode ? " nb-list" : "");
+                    g.innerHTML = !items.length ? '<p class="nb-info">아직 올린 글이 없어요.</p>' : items.map(function (p) {
+                        var th = p.img ? '<img src="' + esc(p.img) + '" alt="" loading="lazy" referrerpolicy="no-referrer">' : p.e;
+                        return '<a class="nb-card" href="' + esc(p.url) + '"><div class="nb-thumb">' + th + '</div><div><h4>' + esc(p.t) + '</h4><p class="nb-info">' + esc(p.d) + ' &nbsp;💬 ' + p.n + '</p></div></a>';
+                    }).join("");
+
+                    $(".nb-cats").innerHTML = cats.map(function (c) {
+                        var v = c[1] === null ? null : c[0];
+                        var cnt = v ? posts.filter(function (p) { return p.c === v }).length : posts.length;
+                        return '<button type="button" data-c="' + esc(v || "") + '" aria-pressed="' + (cur === v) + '">' + esc(c[0]) + ' <span class="nb-n">(' + cnt + ')</span></button>';
+                    }).join("");
+
+                    $(".nb-toggle").textContent = listMode ? "목록닫기" : "목록열기";
+                }
+
+                $(".nb-cats").addEventListener("click", function (e) {
+                    var b = e.target.closest("button");
+                    if (!b) return;
+                    cur = b.dataset.c || null;
+                    render();
+                });
+                $(".nb-toggle").addEventListener("click", function () { listMode = !listMode; render() });
+
+                render();
+            })();
+        </script>
+        <!--블로그 섹션 끝-->
+        <!--포트폴리오-->
+        <div id="fh5co-work" class="fh5co-bg-dark">
+            <div class="container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                        <h2>Portfolio</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--카페인부산-->
+                    <div class="col-md-5 text-center col-padding animate-box">
+                        <div class="work" style="background-image: url(images/project_thumb.jpg);">
+                            <a href="https://cafeinbusan.co.kr/" class="work-link" target="_blank" rel="noopener"
+                                aria-label="카페인부산 프로젝트 보러가기"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 text-center col-padding animate-box">
+                        <div class="work work_text">
+                            <div class="desc">
+                                <h3><a href="https://cafeinbusan.co.kr/" target="_blank">카페인부산 프로젝트</a></h3>
+                                <span>부산의 카페를 소개하는 브랜드입니다. 가상의 브랜드를 실제 서비스로 만든 프로젝트입니다.<br>지역과 옵션별로 검색이 가능한 사이트와, 사진과
+                                    영상으로 카페의 생생한 모습을 담아 추천하는<br>인스타그램 계정을 운영하였습니다. </span>
+                                <div class="project_btn_box">
+
+                                    <a href="https://www.instagram.com/cafe_in_busan_/" class="project_btn"
+                                        target="_blank">인스타그램 계정</a>
+                                    <a href="https://youngyoon2.github.io/cafein_project_Instagram/" class="project_btn"
+                                        target="_blank">브랜드 가이드</a>
+                                    <a href="https://youngyoon2.github.io/cafein_project_web/" class="project_btn"
+                                        target="_blank">사이트 가이드</a>
+                                    <a href="https://www.instagram.com/reel/DBqUpZ2Rm61/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                                        class="project_btn" target="_blank">홍보 릴스 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--기존 카페인부산-->
+                    <div>
+                        <div class="col-md-5 text-center col-padding animate-box">
+                            <!-- 썸네일 -->
+                            <div class="work" style="background-image: url(images/caffein_thumb.jpg);">
+                                <a href="https://youngyoon2.github.io/caffein_busan/" class="work-link" target="_blank"
+                                    rel="noopener" aria-label="카페인부산 Caffein Busan 보러가기"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 text-center col-padding animate-box">
+                        <div class="work work_text">
+                            <div class="desc">
+                                <!-- 제목 -->
+                                <h3><a href="https://youngyoon2.github.io/caffein_busan/" target="_blank"
+                                        rel="noopener">카페인부산 Caffein Busan</a></h3>
+                                <span>부산의 카페를 검색할 수 있는 사이트입니다.<br> '카페의 기본은 커피, 커피의 본질은 맛'이라는 기준으로 엄선한 부산 카페를
+                                    추천해드립니다.</span>
+                                <div class="project_btn_box">
+                                    <a href="https://youngyoon2.github.io/caffein_busan_brand/" class="project_btn"
+                                        target="_blank">브랜드 가이드</a>
+                                    <a href="https://xd.adobe.com/view/b423c8ce-2fd5-424c-b19d-75ae9fe7bd87-e170/"
+                                        class="project_btn" target="_blank">모바일 버전 보러가기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--레프타-->
+                    <div class="col-md-5 text-center col-padding animate-box">
+                        <!-- 썸네일 -->
+                        <div class="work" style="background-image: url(images/LEFTHA_thumb.jpg);">
+                            <a href="https://youngyoon2.github.io/LEFTHA_2024_brand/" class="work-link" target="_blank"
+                                rel="noopener" aria-label="레프타 LEFTHA 보러가기"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 text-center col-padding animate-box">
+                        <div href="#" class="work work_text">
+                            <div class="desc">
+                                <!-- 제목 -->
+                                <h3><a href="https://youngyoon2.github.io/LEFTHA_2024_brand/" target="_blank"
+                                        rel="noopener">레프타 LEFTHA</a></h3>
+                                <span>레프타는 왼손잡이를 위한 노트와 펜을 만드는 것에서 시작한 다이어리, 문구 브랜드입니다.<br>모든 창작은 쓰는 것에서부터 시작한다는 생각으로 좋은
+                                    품질과 편리한 사용성의 제품을 만들고자 합니다.<br>
+                                    기기별 해상도에 적합하도록 반응형 웹사이트로 제작하고 가상의 콜라보레이션 영상을 제작해보았습니다.
+                                </span>
+                                <div class="project_btn_box">
+                                    <a href="https://youngyoon2.github.io/LEFTHA_2024_brand/" class="project_btn"
+                                        target="_blank">브랜드 가이드</a>
+                                    <a href="https://www.youtube.com/watch?v=rW0SSDiy1ik" target="_blank"
+                                        class="project_btn">브랜드 영상</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-center col-padding animate-box">
+                        <!-- 썸네일 -->
+                        <div class="work" style="background-image: url(images/narae_thumb.jpg);">
+                            <a href="https://youngyoon2.github.io/Narae_work_experience/" class="work-link"
+                                target="_blank" rel="noopener" aria-label="나래디자인 아카데미 작업물 보러가기"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 text-center col-padding animate-box">
+                        <div href="#" class="work work_text">
+                            <div class="desc">
+                                <!-- 제목 -->
+                                <h3><a href="https://youngyoon2.github.io/Narae_work_experience/" target="_blank"
+                                        rel="noopener">[일경험 프로젝트] 나래디자인 아카데미</a></h3>
+                                <span>디자인 아카데미에서 홍보 직무로 근무하며 채널에 업로드 할 콘텐츠를 제작하였습니다.
+                                    <br>블로그 포스팅, 카드뉴스, 강좌 릴스, 홈페이지 정규 콘텐츠
+                                    제작 및 업로드 등의<br>
+                                    업무를 담당했습니다. </span>
+                                <div class="project_btn_box">
+                                    <a href="https://youngyoon2.github.io/Narae_work_experience/" class="project_btn"
+                                        target="_blank">작업물 보기</a>
+                                    <a href="https://www.instagram.com/reel/DCAw0FsSNqb/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                                        class="project_btn" target="_blank">강좌 릴스 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-center col-padding animate-box">
+                        <!-- 썸네일 -->
+                        <div class="work artworks_thumnail">
+                            <a href="graphic.html" class="work-link" target="_blank" rel="noopener"
+                                aria-label="Artworks 보러가기"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 text-center col-padding animate-box">
+                        <div href="#" class="work work_text">
+                            <div class="desc">
+                                <!-- 제목 -->
+                                <h3><a href="graphic.html" target="_blank" rel="noopener">Artworks</a></h3>
+                                <span>다양한 주제와 여러가지 표현방식을 사용한 창작물입니다.
+                                </span>
+                                <div class="project_btn_box">
+                                    <a href="graphic.html" class="project_btn artworks_view" target="_blank">그래픽 아트웍</a>
+                                    <a href="https://youtu.be/MPn1nw17Qlo" class="project_btn artworks_view"
+                                        target="_blank">영상편집</a>
+                                    <a href="illust.html" class="project_btn artworks_view" target="_blank">일러스트</a>
+                                    <a href="photo.html" class="project_btn artworks_view" target="_blank">사진보정 &
+                                        etc</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div><!-- work portfolio -->
+
+        <div id="fh5co-resume" class="fh5co-bg-color">
+            <div class="container">
+                <div class="row animate-box">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                        <h2>My Resume</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-0">
+                        <ul class="timeline">
+                            <li class="timeline-heading text-center animate-box">
+                                <div>
+                                    <h3>Experience</h3>
+                                </div>
+                            </li>
+                            <li class="animate-box timeline-inverted">
+                                <div class="timeline-badge"><i class="icon-keyboard"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">(사)삼성희망네트워크 인턴</h3>
+                                        <span class="company">2026.07 ~ 2026.09</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>- 노인일자리 사업 수행기관 블로그 포스팅(자활 사업장 홍보글, 기관 소식 등)
+                                            <br>- 디자인물 제작(기관소개서, AI 활용 교육자료 이미지 등)
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="animate-box timeline-unverted">
+                                <div class="timeline-badge"><i class="icon-keyboard"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">카페인부산 프로젝트, 나래디자인 아카데미 콘텐츠 제작</h3>
+                                        <span class="company">2024.07 ~ 2025.02</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>- 부산카페추천 브랜드 운영(사이트, 인스타그램),
+                                            <br>- 원내 SNS 업로드 카드뉴스, 릴스 등 제작
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge"><i class="icon-keyboard"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">[디지털디자인혼합] UIUX반응형 웹디자인<br>(웹기획,퍼블리셔,영상)1 과정 수료</h3>
+                                        <span class="company">2024.01 ~ 2024.06</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="animate-box timeline-unverted">
+                                <div class="timeline-badge"><i class="icon-pushpin"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">사하구 예방접종 센터, 선별진료소</h3>
+                                        <span class="company">2021.04 ~ 2022.05 (1Y)</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>- 접수 및 증명서 발급 등 전산행정처리 / 검사접수, 검체 검수, 전산행정처리</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge"><i class="icon-display"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">엠아카데미 비주얼 포토샵, 일러스트 과정 수료</h3>
+                                        <span class="company">2019.04 ~ 2019.08</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="animate-box timeline-unverted">
+                                <div class="timeline-badge"><i class="icon-pushpin"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">신장림 레포츠</h3>
+                                        <span class="company">2019.01 ~ 2021.08 (2Y 8M)</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>- 프론트 손님 응대, 상담 및 등록 업무</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">동아대학교 신문방송학과 졸업</h3>
+                                        <span class="company">2013.03 ~ 2018.02</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="animate-box timeline-unverted">
+                                <div class="timeline-badge"><i class="icon-pushpin"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">청평수능학원</h3>
+                                        <span class="company">2015.04 ~ 2015.10 (7M)</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p>- 원생 출결 관리 및 데스크 업무</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted animate-box">
+                                <div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h3 class="timeline-title">성일여자고등학교 졸업</h3>
+                                        <span class="company">2010.03 ~ 2013.02</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="animate-box">
+            <div id="certificate">
+                <h2>Certificate</h2>
+                <ul>
+                    <li>
+                        <p><i class="icon-check"></i>웹디자인기능사 <span>(2024)</span></p>
+                    </li>
+                    <li>
+                        <p><i class="icon-check"></i>컴퓨터 그래픽스 운용기능사 <span>(2019)</span></p>
+                    </li>
+                    <li>
+                        <p><i class="icon-check"></i>컴퓨터활용능력 1급 <span>(2018)</span></p>
+                    </li>
+
+                    <li>
+                        <p><i class="icon-check"></i>운전면허 2종보통 <span>(2022)</span></p>
+                    </li>
+                    <li>
+                        <p><i class="icon-check"></i>HSK 중국어학시험 3급 <span>(2024)</span></p>
+                    </li>
+                    <li>
+                        <p><i class="icon-check"></i>한국사 능력검정시험 1급 <span>(2018)</span></p>
+                    </li>
+
+                </ul>
+            </div><!-- certificate -->
+        </div><!-- animate-box -->
+
+        <div id="fh5co-skills" class="animate-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                        <h2>Skills</h2>
+                    </div>
+                </div>
+                <div class="row row-pb-md">
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="90"><span><strong>PhotoShop</strong>90%</span></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="80"><span><strong>Illustrator</strong>80%</span></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="75"><span><strong>HTML5</strong>70%</span></div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="75"><span><strong>CSS3</strong>70%</span></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="50"><span><strong>Jquery</strong>50%</span></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="65"><span><strong>XD</strong>60%</span></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="65"><span><strong>Indesign</strong>60%</span></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="60"><span><strong>Premier</strong>60%</span></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="55"><span><strong>After Effect</strong>55%</span></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="70"><span><strong>Excel</strong>70%</span></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="80"><span><strong>Notion</strong>80%</span></div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 text-center">
+                        <div class="chart" data-percent="80"><span><strong>Photo Correction</strong>80%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="fh5co-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>&copy; 2026 이영윤. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="icon-arrow-up22"></i></a>
+    </div>
+
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Stellar Parallax -->
+    <script src="js/jquery.stellar.min.js"></script>
+    <!-- Easy PieChart -->
+    <script src="js/jquery.easypiechart.min.js"></script>
+    <!-- Google Map -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+    <script src="js/google_map.js"></script>
+
+    <!-- Main -->
+    <script src="js/main.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+
+</body>
+
+
+</html>
